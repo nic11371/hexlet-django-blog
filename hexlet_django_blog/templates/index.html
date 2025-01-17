@@ -4,6 +4,17 @@
     <title>{% block title %}Django на Хекслете{% endblock %}</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark px-3">
+    {% block navbar %}
+            <div class="navbarNav">
+                <ul class="navbar-nav">
+                    <li calls="nav-item">
+                        <a class="nav-link" href="/articles/">Статьи</a>
+                    </li>    
+                </ul>    
+            </div>
+    {% endblock %}
+</nav>
 <div id="sidebar">
     {% block sidebar %}
         <ul>

@@ -1,1 +1,13 @@
-<h1>Hello, {{ articles }}!</h1>
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Список статей</h1>
+    <ol>
+    {% for article in articles %}
+    <li>
+        <h2><a href="{% url 'articles_detail' article.id %}">{{ article.name }}</a></h2>
+        <div>{{ article.body|slice:":200" }}</div>
+    </li>
+    {% endfor %}
+    </ol>
+{% endblock content %}

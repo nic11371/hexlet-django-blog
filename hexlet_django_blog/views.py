@@ -11,8 +11,8 @@ class HomePageView(TemplateView):
         context = super().get_context_data(**kwargs)
         return context
 
-    def get(self, request):
-        return redirect('article', tags='python', article_id=42)
+    # def get(self, request):
+    #     return redirect('article', tags='python', article_id=42)
 
 
 def about(request):
